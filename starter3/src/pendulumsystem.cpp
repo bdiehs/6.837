@@ -59,8 +59,8 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
     }
     f[0] = Vector3f(0, 0, 0);
     f[1] = Vector3f(0, 0, 0);
-    for (auto v:f) {v.print();}
-    std::cout<<"\n";
+//    for (auto v:f) {v.print();}
+//    std::cout<<"\n";
     return f;
 }
 

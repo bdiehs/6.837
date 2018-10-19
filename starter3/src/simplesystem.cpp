@@ -7,7 +7,7 @@
 SimpleSystem::SimpleSystem()
 {
     // TODO 3.2 initialize the simple system
-    m_vVecState.push_back(Vector3f(1, 1, 0));
+    m_vVecState.push_back(Vector3f(1, 0, 0));
 }
 
 std::vector<Vector3f> SimpleSystem::evalF(std::vector<Vector3f> state)

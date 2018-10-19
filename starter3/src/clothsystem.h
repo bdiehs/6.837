@@ -19,6 +19,13 @@ public:
 
     // inherits
     // std::vector<Vector3f> m_vVecState;
+    std::vector<std::pair<int, int>> springs;
+    std::vector<float> spring_ks;
+    std::vector<float> spring_rs;
+
+private:
+    void addSpring(int ind1, int ind2, float k, float r);
+
 };
 
 
