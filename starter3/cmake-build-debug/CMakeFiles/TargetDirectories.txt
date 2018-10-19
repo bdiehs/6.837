@@ -1,0 +1,11 @@
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/CMakeFiles/a3.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/3rd_party/glfw/CMakeFiles/rebuild_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/3rd_party/glfw/CMakeFiles/edit_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/3rd_party/glfw/src/CMakeFiles/rebuild_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/3rd_party/glfw/src/CMakeFiles/edit_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/3rd_party/glfw/src/CMakeFiles/glfw.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/vecmath/CMakeFiles/rebuild_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/vecmath/CMakeFiles/edit_cache.dir
+/Users/Christian/Downloads/6.837/starter3/cmake-build-debug/vecmath/CMakeFiles/vecmath.dir
