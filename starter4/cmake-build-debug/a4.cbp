@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="a4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vecmath\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a4">
+				<Option output="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/a4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/Christian/Downloads/6.837/starter4/vecmath/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 a4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a4/fast">
+				<Option output="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/a4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/Christian/Downloads/6.837/starter4/vecmath/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 a4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vecmath">
+				<Option output="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/libvecmath.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/Christian/Downloads/6.837/starter4/vecmath/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 vecmath"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vecmath/fast">
+				<Option output="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/libvecmath.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/Christian/Downloads/6.837/starter4/vecmath/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 vecmath/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Christian/Downloads/6.837/starter4/cmake-build-debug/vecmath/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/ArgParser.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/ArgParser.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Camera.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Camera.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/CubeMap.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/CubeMap.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Image.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Image.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Light.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Light.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Material.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Material.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Mesh.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Mesh.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Object3D.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Object3D.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Octree.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Octree.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Ray.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Renderer.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/Renderer.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/SceneParser.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/SceneParser.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/VecUtils.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/VecUtils.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/main.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/stb.cpp">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/stb_image.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/src/stb_image_write.h">
+			<Option target="a4"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Matrix2f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Matrix3f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Matrix4f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Quat4f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Vector2f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Vector3f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/Vector4f.cpp">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Matrix2f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Matrix3f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Matrix4f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Quat4f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Vector2f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Vector3f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/Vector4f.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/include/vecmath.h">
+			<Option target="vecmath"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/Christian/Downloads/6.837/starter4/vecmath/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vecmath\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
