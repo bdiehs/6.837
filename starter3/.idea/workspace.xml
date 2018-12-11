@@ -40,11 +40,11 @@
       <file leaf-file-name="clothsystem.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clothsystem.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4618">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="287">
+              <caret line="290" column="25" selection-start-line="290" selection-start-column="25" selection-end-line="290" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1544549488440" expanded="true" signature="5705:5737" ph="..." />
+                <marker date="1544558999593" expanded="true" signature="5707:5739" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,8 +71,8 @@
       <file leaf-file-name="clothsystem.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clothsystem.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="342">
+              <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -80,8 +80,8 @@
       <file leaf-file-name="vertexrecorder.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vertexrecorder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="168">
+              <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -238,12 +238,12 @@
       <workItem from="1543877487941" duration="1426000" />
       <workItem from="1544222527469" duration="699000" />
       <workItem from="1544335213453" duration="230000" />
-      <workItem from="1544426043450" duration="30828000" />
+      <workItem from="1544426043450" duration="35474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74063000" />
+    <option name="totallyTimeSpent" value="78709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="20" width="1260" height="760" extended-state="0" />
@@ -277,22 +277,8 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/clothsystem.cpp</url>
-          <line>387</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="31" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="xx.m_elements" />
-        <watch expression="n.m_elements" />
-        <watch expression="x4.m_elements" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/simplesystem.cpp">
@@ -589,25 +575,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vertexrecorder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="168">
+          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clothsystem.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="342">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clothsystem.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4618">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="287">
+          <caret line="290" column="25" selection-start-line="290" selection-start-column="25" selection-end-line="290" selection-end-column="25" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1544549488440" expanded="true" signature="5705:5737" ph="..." />
+            <marker date="1544558999593" expanded="true" signature="5707:5739" ph="..." />
           </folding>
         </state>
       </provider>

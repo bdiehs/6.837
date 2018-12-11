@@ -8,7 +8,7 @@ const int W = 8;
 const int H = 8;
 
 const float drag = -0.2f;
-const Vector3f gravity(0, -0.4f, 0);
+const Vector3f gravity(0, -0.3f, 0);
 
 ClothSystem::ClothSystem()
 {
@@ -18,7 +18,7 @@ ClothSystem::ClothSystem()
     int c=0;
     for (int j=0; j<H; j++) {
         for (int i=0; i<W; i++) {
-            m_vVecState.push_back(Vector3f(-r*j+1.6f, 2, r*i-1.6f));
+            m_vVecState.push_back(Vector3f(-r*j+1.6f, 1, r*i-1.6f));
             m_vVecState.push_back(Vector3f(0, 0, 0));
             if (i<W-1) {
                 addSpring(c, c+1, 20, r);
@@ -106,7 +106,7 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 //    for (int ind : stiff_indices) {
 //        f[2*ind+1] = Vector3f::ZERO;
 //    }
-    f[W*H-W+1] = Vector3f::ZERO;
+//    f[W*H-W+1] = Vector3f::ZERO;
 //    f[W*H-1] = Vector3f::ZERO;
 //
 //    f[1]=Vector3f::ZERO;
@@ -175,7 +175,7 @@ struct Sphere {
     }
 
     void draw() {
-        drawSphere(0.5, 10, 10);
+        drawSphere(0.5, 20, 20);
 //        VertexRecorder rec;
 //        for (int i=0; i<(int)VF.size(); i++)
 //        {
@@ -271,10 +271,13 @@ void ClothSystem::draw(GLProgram& gl)
 
 void ClothSystem::sphereColl(std::vector<Vector3f> &newXV, float stepSize) {
     std::vector<Vector3f> XV=m_vVecState;
+    std::vector<Vector3f> savedXV(newXV);
+    std::vector<bool> used(XV.size(), false);
     for (int i=0; 2*i<newXV.size(); i++) {
         Vector3f newx = newXV[2*i];
         Vector3f newv = newXV[2*i+1];
         if (newx.abs()<0.5) {
+            used[i]=true;
             Vector3f normal = newx.normalized();
             newXV[2*i] = normal * 0.5;
             float dv_n = -Vector3f::dot((newXV[2*i+1]-XV[2*i+1])/stepSize, normal);
@@ -285,8 +288,10 @@ void ClothSystem::sphereColl(std::vector<Vector3f> &newXV, float stepSize) {
             } else {
                 newXV[2*i+1] = Vector3f::ZERO;
             }
+            newXV[2*i+1]=
         }
     }
+
     for (int i=0; i<VF.size(); i++) {
         int i1 = VF[i][0], i2=VF[i][1], i3=VF[i][2];
         Vector3f x1=newXV[2*i1], x2=newXV[2*i2], x3=newXV[2*i3];
@@ -308,14 +313,20 @@ void ClothSystem::sphereColl(std::vector<Vector3f> &newXV, float stepSize) {
             newXV[2*i2] += (0.5-Vector3f::dot(x1, n))*n*w2;
             newXV[2*i3] += (0.5-Vector3f::dot(x1, n))*n*w3;
 
-            Vector3f newv = newXV[2*i1+1]*w1 + newXV[2*i2+1]*w2 + newXV[2*i3+1]*w3;
+            Vector3f newv = savedXV[2*i1+1]*w1 + savedXV[2*i2+1]*w2 + savedXV[2*i3+1]*w3;
             float I = Vector3f::dot(newv, n);
-            float dv_n = -Vector3f::dot((newXV[2*i1+1]-XV[2*i1+1])*w1 + (newXV[2*i1+1]-XV[2*i1+1])*w2 + (newXV[2*i1+1]-XV[2*i1+1])*w3, n)/stepSize;
+            float dv_n = -Vector3f::dot((savedXV[2*i1+1]-XV[2*i1+1])*w1 + (savedXV[2*i1+1]-XV[2*i1+1])*w2 + (savedXV[2*i1+1]-XV[2*i1+1])*w3, n)/stepSize;
             if (I<0) {
                 Vector3f totalv = -I * n / (w1 * w1 + w2 * w2 + w3 * w3);
-                newXV[2 * i1 + 1] += totalv * w1;
-                newXV[2 * i2 + 1] += totalv * w2;
-                newXV[2 * i3 + 1] += totalv * w3;
+                if (!used[i1]) {
+                    newXV[2 * i1 + 1] += totalv * w1;
+                }
+                if (!used[i2]) {
+                    newXV[2 * i2 + 1] += totalv * w2;
+                }
+                if (!used[i3]) {
+                    newXV[2 * i3 + 1] += totalv * w3;
+                }
             }
             Vector3f tanv = newv - I*n;
             float k_fric = 1.0f*dv_n/tanv.abs();
@@ -355,7 +366,8 @@ void ClothSystem::floorColl(std::vector<Vector3f> &newXV, float stepSize) {
 
 void ClothSystem::selfColl(std::vector<Vector3f> &newXV, std::vector<Vector3f> &avg_V, float stepSize) {
     std::vector<Vector3f> XV=m_vVecState;
-    for (Tup3u t : VF) {
+    for (int it=0; it<VF.size(); it++) {
+        Tup3u t=VF[it];
         int i1 = t[0], i2=t[1], i3=t[2];
         Vector3f x1=XV[2*i1], x2=XV[2*i2], x3=XV[2*i3];
         Vector3f v1=avg_V[i1], v2=avg_V[i2], v3=avg_V[i3];
@@ -375,6 +387,7 @@ void ClothSystem::selfColl(std::vector<Vector3f> &newXV, std::vector<Vector3f> &
                 if (w1<-0.04 || w2<-0.04 || w3<-0.04) {
                     continue;
                 }
+                printf("%d %d %d %d %d\n", it, i1, i2, i3, i);
                 Vector3f xx = w1*x1+w2*x2+w3*x3;
                 Vector3f vp = w1*v1 + w2*v2 + w3*v3;
                 Vector3f v = v4;
@@ -389,29 +402,34 @@ void ClothSystem::selfColl(std::vector<Vector3f> &newXV, std::vector<Vector3f> &
             }
         }
     }
-//    for (int i=0; i<VE.size(); i++) {
-//        for (int j=i+1; i<VE.size(); j++) {
-//            int i1 = VE[i][0], i2=VE[i][1], i3=VE[j][0], i4=VE[j][1];
-//            if ((i1==i3 || i1==i4) || (i2=i3 || i2==i4)) {
-//                continue;
-//            }
-//            Vector3f x1=XV[2*i1], x2=XV[2*i2], x3=XV[2*i3], x4=XV[2*i4];
-//            Vector3f v1=XV[2*i1+1], v2=XV[2*i2+1], v3=XV[2*i3+1], v4=XV[2*i4];
-//            Vector3f x21=x2-x1, x43=x4-x3, x31=x3-x1;
-//            if (Vector3f::cross(x21, x43).abs()<0.075) {
-//                Matrix2f m(Vector3f::dot(x21, x21), -Vector3f::dot(x21, x43), -Vector3f::dot(x21, x43), Vector3f::dot(x43, x43));
-//                Vector2f b(Vector3f::dot(x21, x31), -Vector3f::dot(x43, x31));
-//                Vector2f a = m.inverse()*b;
-//                if (a[0] < 0 || a[0]>1 || a[1]<0 || a[1]>1) {
-//                    continue;
-//                }
-//                Vector3f n = (1-a[0])*x1+a[0]*x2 - (1-a[1])*x3-a[1]*x4;
-//                n.normalized();
-//                Vector3f v12 = (1-a[0])*v1+a[0]*v2, v34 = (1-a[1])*v3+a[1]*v4;
-//                float Ic = (v12-v34).abs();
-//            }
-//        }
-//    }
+    for (int i=0; i<VE.size(); i++) {
+        for (int j=i+1; j<VE.size(); j++) {
+            int i1 = VE[i][0], i2=VE[i][1], i3=VE[j][0], i4=VE[j][1];
+            if ((i1==i3 || i1==i4) || (i2=i3 || i2==i4)) {
+                continue;
+            }
+            Vector3f x1=XV[2*i1], x2=XV[2*i2], x3=XV[2*i3], x4=XV[2*i4];
+            Vector3f v1=avg_V[i1], v2=avg_V[i2], v3=avg_V[i3], v4=avg_V[i4];
+            Vector3f x21=x2-x1, x43=x4-x3, x31=x3-x1;
+            if (Vector3f::cross(x21, x43).abs()<0.075) {
+                Matrix2f m(Vector3f::dot(x21, x21), -Vector3f::dot(x21, x43), -Vector3f::dot(x21, x43), Vector3f::dot(x43, x43));
+                Vector2f b(Vector3f::dot(x21, x31), -Vector3f::dot(x43, x31));
+                Vector2f a = m.inverse()*b;
+                if (a[0] < 0 || a[0]>1 || a[1]<0 || a[1]>1) {
+                    continue;
+                }
+                Vector3f n = (1-a[0])*x1+a[0]*x2 - (1-a[1])*x3-a[1]*x4;
+                n.normalized();
+                Vector3f v12 = (1-a[0])*v1+a[0]*v2, v34 = (1-a[1])*v3+a[1]*v4;
+                float Ic = (v12-v34).abs();
+                float I_bar = Ic/(a[0]*a[0]+(1-a[0])*(1-a[0])+a[1]*a[1]+(1-a[1])*(1-a[1]));
+                avg_V[i1] += (1-a[0])*I_bar*n;
+                avg_V[i2] += a[0]*I_bar*n;
+                avg_V[i3] -= (1-a[1])*I_bar*n;
+                avg_V[i4] -= a[1]*I_bar*n;
+            }
+        }
+    }
 
 }
 
@@ -449,7 +467,7 @@ void ClothSystem::timeStep(float stepSize) {
 //        newXV.push_back(XV[i] + stepSize*f_next[i]);
     }
 
-//    sphereColl(newXV, stepSize);
+    sphereColl(newXV, stepSize);
 //    floorColl(newXV, stepSize);
 
     std::vector<Vector3f> avg_V;
@@ -466,9 +484,9 @@ void ClothSystem::timeStep(float stepSize) {
 
         newXV[2*i]=XV[2*i]+avg_V[i]*stepSize;
         newXV[2*i+1]=avg_V[i];
-        if (i==W*H/2-W/2-1) {
-            newXV[2*i+1]=Vector3f::ZERO;
-        }
+//        if (i==0 || i==W*H-1) {
+//            newXV[2*i+1]=Vector3f::ZERO;
+//        }
     }
 
     int M=30;
