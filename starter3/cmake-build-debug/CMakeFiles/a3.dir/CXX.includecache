@@ -113,6 +113,8 @@ vertexrecorder.h
 /Users/Christian/Downloads/6.837/starter3/src/clothsystem.h
 vector
 -
+tuple.h
+/Users/Christian/Downloads/6.837/starter3/src/tuple.h
 particlesystem.h
 /Users/Christian/Downloads/6.837/starter3/src/particlesystem.h
 
@@ -237,6 +239,18 @@ vector
 -
 particlesystem.h
 /Users/Christian/Downloads/6.837/starter3/src/particlesystem.h
+
+/Users/Christian/Downloads/6.837/starter3/src/tuple.h
+cstdarg
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+iostream
+-
 
 /Users/Christian/Downloads/6.837/starter3/src/vertexrecorder.cpp
 vertexrecorder.h

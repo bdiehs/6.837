@@ -20,7 +20,6 @@ public:
 
     // getter method for the system's state
     std::vector<Vector3f> getState() { return m_vVecState; };
-//if (m_vVecState.size()==4) printf("current state:\n");for (auto t:m_vVecState) {t.print();};
     // setter method for the system's state
     void setState(const std::vector<Vector3f>  & newState) { m_vVecState = newState; };
 

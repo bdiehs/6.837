@@ -27,6 +27,7 @@ CMakeFiles/a3.dir/src/clothsystem.cpp.o
  /Users/Christian/Downloads/6.837/starter3/src/clothsystem.h
  /Users/Christian/Downloads/6.837/starter3/src/gl.h
  /Users/Christian/Downloads/6.837/starter3/src/particlesystem.h
+ /Users/Christian/Downloads/6.837/starter3/src/tuple.h
  /Users/Christian/Downloads/6.837/starter3/src/vertexrecorder.h
 CMakeFiles/a3.dir/src/main.cpp.o
  ../3rd_party/glfw/include/GLFW/glfw3.h
@@ -47,6 +48,7 @@ CMakeFiles/a3.dir/src/main.cpp.o
  /Users/Christian/Downloads/6.837/starter3/src/simplesystem.h
  /Users/Christian/Downloads/6.837/starter3/src/starter3_util.h
  /Users/Christian/Downloads/6.837/starter3/src/timestepper.h
+ /Users/Christian/Downloads/6.837/starter3/src/tuple.h
  /Users/Christian/Downloads/6.837/starter3/src/vertexrecorder.h
 CMakeFiles/a3.dir/src/particlesystem.cpp.o
  ../vecmath/include/Matrix2f.h

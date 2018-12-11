@@ -26,6 +26,7 @@ CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/clothsystem.cpp
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/clothsystem.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/gl.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/particlesystem.h
+CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/tuple.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/a3.dir/src/main.cpp.o: ../3rd_party/glfw/include/GLFW/glfw3.h
@@ -46,6 +47,7 @@ CMakeFiles/a3.dir/src/main.cpp.o: ../src/pendulumsystem.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/simplesystem.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/starter3_util.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/timestepper.h
+CMakeFiles/a3.dir/src/main.cpp.o: ../src/tuple.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/a3.dir/src/particlesystem.cpp.o: ../vecmath/include/Matrix2f.h

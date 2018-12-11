@@ -31,7 +31,7 @@ void initRendering();
 void drawAxis();
 
 // Some constants
-const Vector3f LIGHT_POS(3.0f, 3.0f, 5.0f);
+const Vector3f LIGHT_POS(3.0f, 7.0f, 5.0f);
 const Vector3f LIGHT_COLOR(120.0f, 120.0f, 120.0f);
 const Vector3f FLOOR_COLOR(1.0f, 0.0f, 0.0f);
 
@@ -210,9 +210,10 @@ void stepSystem()
 {
     // step until simulated_s has caught up with elapsed_s.
     while (simulated_s < elapsed_s) {
-        timeStepper->takeStep(simpleSystem, h);
-        timeStepper->takeStep(pendulumSystem, h);
-        timeStepper->takeStep(clothSystem, h);
+//        timeStepper->takeStep(simpleSystem, h);
+//        timeStepper->takeStep(pendulumSystem, h);
+//        timeStepper->takeStep(clothSystem, h);
+        clothSystem->timeStep(h);
         simulated_s += h;
     }
 }
@@ -225,13 +226,13 @@ void drawSystem()
     GLProgram gl(program_light, program_color, &camera);
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
-    simpleSystem->draw(gl);
-    pendulumSystem->draw(gl);
+//    simpleSystem->draw(gl);
+//    pendulumSystem->draw(gl);
     clothSystem->draw(gl);
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);
-    gl.updateModelMatrix(Matrix4f::translation(0, -5.0f, 0));
+    gl.updateModelMatrix(Matrix4f::translation(0, -1.0f, 0));
     // draw floor
     drawQuad(50.0f);
 }
@@ -303,9 +304,19 @@ int main(int argc, char** argv)
     // Main Loop
     uint64_t freq = glfwGetTimerFrequency();
     resetTime();
+    int i = 0;
     while (!glfwWindowShouldClose(window)) {
         // Clear the rendering window
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // Hack for macOS 10.14: at the second frame, resize the window very slightly
+        // to trigger refresh
+        if (i == 1) {
+            int w, h;
+            glfwGetWindowSize(window, &w, &h);
+            glfwSetWindowSize(window, w - 1, h);
+        }
+        if (i <= 1) i++;
 
         setViewport(window);
 
